@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+
+  <head>
+    <link data-require="bootstrap@3.0.0" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="module.js"></script>
+    <script src="controller.js"></script>
+    <script src="service.js"></script>
+    <script src="modalController.js"></script>
+  </head>
+
+  <body data-ng-controller="controller">
+    
+    <table class="table fixed-header">
+      <tbody>
+        <tr>
+          <td data-ng-repeat="(key,val) in dict">
+            <a data-ng-if="val.length !== 0" href data-ng-click="goToAnchor(key)">{{key}}</a>
+            <span data-ng-if="val.length === 0">{{key}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="row" data-ng-repeat="(key,val) in dict">
+      <div class="col-xs-12" data-ng-if="val.length !== 0" id="anchor{{key}}">
+        <h3>{{key}}</h3>
+        <div class="col-xs-12" data-ng-repeat="book in val">
+          <a href data-ng-click="open(book.ISBN)">{{book.Title}}</a>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+
+</html>

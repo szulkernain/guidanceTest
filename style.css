@@ -1,0 +1,25 @@
+/* Styles go here */
+.fixed-header {
+  background-color: rgba(0, 0, 0, 0.04);
+  height: 50px;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+}
+
+.fixed-header > a {
+  display: inline-block;
+  margin: 5px 15px;
+}
+
+body {
+  padding-top: 50px;
+  margin-left:20px;
+}
+
+.modalBody{
+  padding: 30px;
+}
+
+.modalTd{
+  padding-top: 15px !important;
+}
