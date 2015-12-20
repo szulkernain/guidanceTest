@@ -21,6 +21,8 @@ var processData = function(books){
 var controller = function($scope, $location, $anchorScroll, $uibModal, service){
   $scope.animationsEnabled = true;
   
+  $anchorScroll.yOffset = 50;
+  
   $scope.open = function (id) {
 
     var modalInstance = $uibModal.open({

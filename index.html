@@ -20,19 +20,19 @@
         <tr>
           <td data-ng-repeat="(key,val) in dict">
             <a data-ng-if="val.length !== 0" href data-ng-click="goToAnchor(key)">{{key}}</a>
-            <span data-ng-if="val.length === 0">{{key}}</span>
+            <span class="disabledAnchor" data-ng-if="val.length === 0">{{key}}</span>
           </td>
         </tr>
       </tbody>
     </table>
     
-    <div class="row" data-ng-repeat="(key,val) in dict">
-      <div class="col-xs-12" data-ng-if="val.length !== 0" id="anchor{{key}}">
+    <div class="row contentRow" data-ng-repeat="(key,val) in dict" data-ng-if="val.length !== 0" id="anchor{{key}}">
+      
         <h3>{{key}}</h3>
-        <div class="col-xs-12" data-ng-repeat="book in val">
-          <a href data-ng-click="open(book.ISBN)">{{book.Title}}</a>
+        <div data-ng-repeat="book in val">
+          <a class="contentAnchor" href data-ng-click="open(book.ISBN)">{{book.Title}}</a>
         </div>
-      </div>
+      
     </div>
     
   </body>

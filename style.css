@@ -1,6 +1,6 @@
 /* Styles go here */
 .fixed-header {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(0, 0, 0, 1);
   height: 50px;
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -10,12 +10,12 @@
 .fixed-header > a {
   display: inline-block;
   margin: 5px 15px;
-  text-decoration: underline !important;
 }
 
 body {
   padding-top: 50px;
   margin-left:20px;
+  padding-bottom:300px;
 }
 
 .modalBody{
@@ -24,4 +24,17 @@ body {
 
 .modalTd{
   padding-top: 15px !important;
+}
+
+.contentRow{
+  padding-left: 20px;
+}
+
+.contentAnchor{
+  color:rgba(0, 0, 0, 1);
+  text-decoration:underline;
+}
+
+.disabledAnchor{
+  color:rgba(255, 255, 255, 0.5);
 }
